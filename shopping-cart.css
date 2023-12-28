@@ -161,7 +161,7 @@ a {
 * ! style rules for Shopping-Cart
 **/
 
-.Shopping-Cart {
+.shopping-cart {
   display: grid;
   grid-template-columns: repeat(1, 320px);
   justify-content: center;
