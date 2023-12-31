@@ -1,5 +1,5 @@
 let label = document.getElementById("label")
-let shoppingcart = document.getElementById("shopping-cart");
+let ShoppingCart = document.getElementById("Shopping-Cart");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 // Calculation
@@ -13,7 +13,7 @@ calculation();
 // Generate CartItems
 let generateCartItems = () => {
     if (basket.length !== 0) {
-       return (shoppingcart.innerHTML = basket.map((x) => {
+       return (ShoppingCart.innerHTML = basket.map((x) => {
         let { id, item } = x;
         let search = shopItemsData.find((y) => y.id === id) || [];
         let {img, name, price} = search;
@@ -40,10 +40,10 @@ let generateCartItems = () => {
        }).join(""));
     }
     else{
-      shoppingcart.innerHTML = ``;
+      ShoppingCart.innerHTML = ``;
       label.innerHTML = `
       <h2>Cart is Empty</h2>
-      <a href="shopping-cart.html">
+      <a href="Shopping Cart.html">
         <button class="HomeBtn">Back to home</button>
       </a>
       `;
